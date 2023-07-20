@@ -1,6 +1,6 @@
 import TwoPart from "./TwoPart";
 import SingleJoke from "./SingleJoke";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 export default function App() {
   const [joke, setJoke] = useState({});
@@ -14,6 +14,7 @@ export default function App() {
       console.log(reason);
     }
   }
+  useEffect(()=>getJoke,[])
   return (
     <div className="app">
       <h2 className="heading">😂 Jokes! 😂</h2>
