@@ -1,9 +1,7 @@
-function SingleJoke() {
+export default function SingleJoke(props) {
   return (
     <div className="content">
-      <h2 className="joke">the is just a text</h2>
+      <h2 className="joke">{props.joke}</h2>
     </div>
   );
 }
-
-export default SingleJoke;
